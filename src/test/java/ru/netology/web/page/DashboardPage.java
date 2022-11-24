@@ -15,7 +15,7 @@ public class DashboardPage {
   private SelenideElement heading = $("[data-test-id='dashboard']");
   private ElementsCollection cards = $$(".list__item div");
   private final String balanceStart = "баланс: ";
-  private final String balanceFinish = " p.";
+  private final String balanceFinish = " р.";
 
   public DashboardPage() {
     heading.shouldBe(visible);
@@ -27,7 +27,7 @@ public class DashboardPage {
   }
 
   public TransferPage selectCardToTransfer(DataHelper.CardInfo cardInfo) {
-    cards.findBy(attribute("data-test-it", cardInfo.getTestId())).$("button").click();
+    cards.findBy(attribute("data-test-id", cardInfo.getTestId())).$("button").click();
     return new TransferPage();
   }
 
