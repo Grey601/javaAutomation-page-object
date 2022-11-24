@@ -33,17 +33,6 @@ public class TransferPage {
         transferButton.click();
     }
 
-//    public DashboardPage canselTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
-//        cansel(amountToTransfer, cardInfo);
-//        return new DashboardPage();
-//    }
-//
-//    public void cansel(String amountToTransfer, DataHelper.CardInfo cardInfo) {
-//        amountInput.setValue(amountToTransfer);
-//        fromInput.setValue(cardInfo.getCardNumber());
-//        canselButton.click();
-//    }
-
     public void findErrorMessage(String expectedText) {
         errorMessage.shouldHave(ownText(expectedText), Duration.ofSeconds(15)).shouldBe(visible);
     }
